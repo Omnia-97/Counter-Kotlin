@@ -11,6 +11,7 @@ class CounterViewModel : ViewModel() {
     val count: LiveData<Int> = counter
     private val handler = Handler(Looper.getMainLooper())
     private var isCounting = false
+
     private val increment: Runnable = object : Runnable {
         override fun run() {
             counter.value = counter.value!! + 1
